@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GLEE · 三条 workflow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #14110d;
+      --paper: #1e1a14;
+      --ink: #f3ead8;
+      --mute: #b7aa94;
+      --line: #3a3328;
+      --barg: #c45c26;
+      --nego: #2a9d8f;
+      --pers: #d4a017;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #2a2118 0%, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 14px;
+    }
+    header {
+      padding: 48px 32px 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+      line-height: 0.95;
+    }
+    .lede { color: var(--mute); max-width: 62ch; line-height: 1.55; }
+    .spine {
+      max-width: 1100px;
+      margin: 28px auto 0;
+      padding: 0 32px 48px;
+    }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 28px 0 40px;
+    }
+    .chip {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 10px 12px;
+      border-radius: 2px;
+    }
+    .arrow { color: var(--mute); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 22px 22px 26px;
+      min-height: 280px;
+      position: relative;
+      overflow: hidden;
+    }
+    a.card:hover { transform: translateY(-3px); }
+    .tag {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .barg .tag { color: var(--barg); }
+    .nego .tag { color: var(--nego); }
+    .pers .tag { color: var(--pers); }
+    h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 32px;
+      margin: 0 0 10px;
+      font-weight: 500;
+    }
+    p { color: var(--mute); line-height: 1.5; margin: 0 0 18px; }
+    ul { margin: 0; padding: 0; list-style: none; color: var(--ink); }
+    li { margin: 6px 0; padding-left: 14px; position: relative; }
+    li::before { content: "→"; position: absolute; left: 0; color: var(--mute); }
+    .bar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+    }
+    .barg .bar { background: var(--barg); }
+    .nego .bar { background: var(--nego); }
+    .pers .bar { background: var(--pers); }
+    footer { padding: 0 32px 48px; color: var(--mute); max-width: 1100px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>三条独立 workflow</h1>
+    <p class="lede">OpenProgram 对 GLEE 的方法：共用进出通道，三个 family 各自分类局面再出招。数字由规则出，模型不发明价格。对照仓库 <code>glee_agent/families/</code>。</p>
+  </header>
+  <div class="spine">
+    <div class="flow">
+      <span class="chip">game JSON</span><span class="arrow">→</span>
+      <span class="chip">rules.parse</span><span class="arrow">→</span>
+      <span class="chip">family.classify</span><span class="arrow">→</span>
+      <span class="chip">family.play</span><span class="arrow">→</span>
+      <span class="chip">sanitize + validate</span><span class="arrow">→</span>
+      <span class="chip">POST</span>
+    </div>
+    <div class="grid">
+      <a class="card barg" href="bargaining.html">
+        <span class="bar"></span>
+        <div class="tag">Family 01 · shrinking pie</div>
+        <h2>Bargaining</h2>
+        <p>分一张会缩水的饼。先看你和对方的通胀 δ，再决定开价还是接。</p>
+        <ul>
+          <li>deadline / penultimate</li>
+          <li>patient vs impatient</li>
+          <li>impatient fade to 50/50</li>
+        </ul>
+      </a>
+      <a class="card nego" href="negotiation.html">
+        <span class="bar"></span>
+        <div class="tag">Family 02 · private values</div>
+        <h2>Negotiation</h2>
+        <p>私有估值双边交易。看得见对方就走 ZOPA；看不见就走 Faratin → TFT → 信念。</p>
+        <ul>
+          <li>no_zopa WalkAway</li>
+          <li>ultimatum 拿 ~90% 剩余</li>
+          <li>incomplete pipeline</li>
+        </ul>
+      </a>
+      <a class="card pers" href="persuasion.html">
+        <span class="bar"></span>
+        <div class="tag">Family 03 · cheap talk</div>
+        <h2>Persuasion</h2>
+        <p>卖家知道质量，买家只知道先验。一次撒谎会烧掉后面的高质货。</p>
+        <ul>
+          <li>按先验 EV、质量和响应率选信号</li>
+          <li>buyer 按 liar / honest / prior</li>
+          <li>最后一轮才可撒谎</li>
+        </ul>
+      </a>
+    </div>
+  </div>
+  <footer>入口文件。点卡片打开该族流程图。LLM 消息关 · live 并发 6 · policy mutation 冻结。</footer>
+</body>
+</html>

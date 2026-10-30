@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bargaining workflow · GLEE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_shared.css" />
+  <style>:root { --accent: var(--barg); }</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">三条 workflow</a>
+      <a class="here" href="bargaining.html">Bargaining</a>
+      <a href="negotiation.html">Negotiation</a>
+      <a href="persuasion.html">Persuasion</a>
+    </nav>
+    <h1>Bargaining</h1>
+    <p class="lede">一张会缩水的饼。分数是同一 (δ, horizon, role) 下你的 payoff 百分位。通胀 &gt; 0 时，拖回合就是在交税。代码：<code>glee_agent/families/bargaining.py</code>。</p>
+  </header>
+  <main>
+    <p class="kicker">每回合</p>
+    <div class="row spine">
+      <span class="node">parse 饼 / δ / 回合</span><span class="arrow">→</span>
+      <span class="node diamond">classify(regime)</span><span class="arrow">→</span>
+      <span class="node">offer？按 regime 开价</span><span class="arrow">→</span>
+      <span class="node">decision？按门槛接或拒</span>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="kicker">classify</div>
+        <h2>先分局面，再出招</h2>
+        <p>看 <code>is_last_round</code>、已知回合数、你的 δ、对方的 δ。不读对方的话。</p>
+        <ul>
+          <li>最后一轮 → <code>deadline</code></li>
+          <li>已知倒数第二轮 → <code>penultimate</code></li>
+          <li>你 δ≈1、对方通胀 → <code>patient_vs_impatient</code></li>
+          <li>你自己通胀 → <code>impatient</code></li>
+          <li>其余 → <code>patient</code> / <code>symmetric</code></li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">play</div>
+        <h2>开价有天花板</h2>
+        <p>有双方 δ 时用夹紧的 Rubinstein SPE，否则用 <code>offer_share</code>（默认 55%）。最终开价由 regime、对手行为、期限和最近报价共同决定，并限制在 40%–60%。</p>
+        <ul>
+          <li>对方出过价：我们的开价贴在对方份额 +2%～+5%</li>
+          <li>你通胀：开价随回合往 50/50 靠</li>
+          <li>你不通胀：开 55–60%，拒第一次 50/50</li>
+        </ul>
+      </article>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>regime</th><th>何时</th><th>开价</th><th>接受</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>deadline</code></td>
+          <td>已知最后一轮</td>
+          <td>—</td>
+          <td>任何正份额；0 就 walkaway</td>
+        </tr>
+        <tr>
+          <td><code>penultimate</code></td>
+          <td>已知 horizon，还剩一轮</td>
+          <td>—</td>
+          <td>非最终轮通常守 42%；最终轮任何正份额</td>
+        </tr>
+        <tr>
+          <td><code>patient_vs_impatient</code></td>
+          <td>你 δ≈1，对方 &lt; 1</td>
+          <td>55–60%，贴在对方最新价上面</td>
+          <td>δ=1 时拒绝重复 50/50，并回报 52%；late/最终轮另行处理</td>
+        </tr>
+        <tr>
+          <td><code>impatient</code></td>
+          <td>你 δ &lt; 0.97</td>
+          <td>SPE 淡到 50/50</td>
+          <td>按折扣后当前收益、继续价值和拒绝历史判断；最终轮接任何正份额</td>
+        </tr>
+        <tr>
+          <td><code>patient / symmetric</code></td>
+          <td>其余</td>
+          <td>~55%</td>
+          <td>早盘门槛高，随回合下降</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>所有 bargaining 入口统一执行 classify → compose → execute。对手风格按最近报价判断，重复报价只统计对手并按 round 去重；incomplete mild 首轮若已接近同配置中位则直接成交，否则比较折扣收益和 continuation；未知期限的 patient 低份额僵局先反报价 50/50。数值 policy 只保留缺失 δ 时的 offer_share；live 自动变异已冻结。</footer>
+</body>
+</html>

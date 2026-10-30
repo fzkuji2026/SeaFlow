@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Persuasion workflow · GLEE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_shared.css" />
+  <style>:root { --accent: var(--pers); }</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">三条 workflow</a>
+      <a href="bargaining.html">Bargaining</a>
+      <a href="negotiation.html">Negotiation</a>
+      <a class="here" href="persuasion.html">Persuasion</a>
+    </nav>
+    <h1>Persuasion</h1>
+    <p class="lede">卖家知道当期质量，买家只知道先验 p。卖家 payoff = 价格 × 卖掉的件数。一次把低质货推出去，后面的高质货也卖不掉。代码：<code>glee_agent/families/persuasion.py</code>。</p>
+  </header>
+  <main>
+    <p class="kicker">每回合</p>
+    <div class="row spine">
+      <span class="node">parse 质量 / prior / 历史</span><span class="arrow">→</span>
+      <span class="node diamond">你是卖还是买？</span><span class="arrow">→</span>
+      <span class="node">卖：高推低跳</span>
+      <span class="arrow">或</span>
+      <span class="node">买：liar / honest / prior</span>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="kicker">seller</div>
+        <h2>信号比单件更贵</h2>
+        <p>默认诚实。低质跳过（<code>decision: no</code> / skip 话术）。高质推荐。只在<strong>已知最后一轮</strong>才对低质撒谎。</p>
+        <ul>
+          <li><code>seller_honest</code>：不是最后一轮</li>
+          <li><code>seller_last</code>：已知最后一轮，可以推低质</li>
+          <li><code>seller_always_yes</code> 默认关着</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">buyer</div>
+        <h2>先看卖家是不是骗子</h2>
+        <p>从历史里数：推过低质且卖掉 → liar；有过真跳过或真高质成交 → honest；否则 unknown。</p>
+        <ul>
+          <li>liar：不信 cheap talk，只用 prior EV</li>
+          <li>honest：跟当前信号（skip 就 pass）</li>
+          <li>untested：<code>p·v + (1-p)·u ≥ 价格</code> 才买，不在负 EV 上跟推荐</li>
+        </ul>
+      </article>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>regime</th><th>何时</th><th>动作</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>seller_honest</code></td>
+          <td>不是最后一轮</td>
+          <td>高质 yes；低质时按买家先验 EV、历史响应和是否最终轮选择信号</td>
+        </tr>
+        <tr>
+          <td><code>seller_last</code></td>
+          <td>已知最后一轮</td>
+          <td>可以对低质推荐</td>
+        </tr>
+        <tr>
+          <td><code>buyer_liar</code></td>
+          <td>对方卖过推荐的柠檬</td>
+          <td>忽略不可信话术，用公开 iid 先验 p 计算当前轮 EV</td>
+        </tr>
+        <tr>
+          <td><code>buyer_honest</code></td>
+          <td>见过真 skip 或真高质成交</td>
+          <td>跟当前信号</td>
+        </tr>
+        <tr>
+          <td><code>buyer_prior</code></td>
+          <td>还没试过这个卖家</td>
+          <td>明确 skip 则 no；否则 EV ≥ 价格才买</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>有效 policy 仅保留 seller_always_yes 与 untested_ev_ratio。buyer 与 seller 都由信号解析、公开 iid 先验、可信度、响应率和 EV 代码决定；persuasion 不调用 LLM judge。</footer>
+</body>
+</html>

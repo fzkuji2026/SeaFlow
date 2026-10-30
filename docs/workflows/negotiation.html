@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Negotiation workflow · GLEE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_shared.css" />
+  <style>:root { --accent: var(--nego); }</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">三条 workflow</a>
+      <a href="bargaining.html">Bargaining</a>
+      <a class="here" href="negotiation.html">Negotiation</a>
+      <a href="persuasion.html">Persuasion</a>
+    </nav>
+    <h1>Negotiation</h1>
+    <p class="lede">私有估值双边交易（Myerson–Satterthwaite）。分数是你的剩余百分位。没成交 = 0，比薄利更差，但早盘把剩余全送对方也接近 0。代码：<code>glee_agent/families/negotiation.py</code> + <code>compose.py</code>。</p>
+  </header>
+  <main>
+    <p class="kicker">每回合</p>
+    <div class="row spine">
+      <span class="node">parse 估值 / ZOPA / 回合</span><span class="arrow">→</span>
+      <span class="node diamond">classify</span><span class="arrow">→</span>
+      <span class="node ask">compose_ask</span><span class="arrow">→</span>
+      <span class="node diamond">利润够不够？</span><span class="arrow">→</span>
+      <span class="node">Accept / Reject+还价 / WalkAway</span>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="kicker">看得见双方估值</div>
+        <h2>ZOPA 决定走不走</h2>
+        <ul>
+          <li>买家估值 &lt; 卖家 → <code>no_zopa</code>，立刻 WalkAway</li>
+          <li>最后一轮有剩余 → <code>ultimatum</code>，Nash 50/50，对方给正利润就接</li>
+          <li>多回合有剩余 → <code>complete</code>，按 ZOPA 份额、对手报价和期限判断；最后一轮任何正利润</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">只看得见自己</div>
+        <h2>named pipeline 组价</h2>
+        <p>1.25× / 0.75× 只是第一回合先验，不是全程倍数。</p>
+        <ul>
+          <li><code>seed</code> 先验 aspiration</li>
+          <li><code>faratin</code> 随时间收到自己的保留价</li>
+          <li><code>tit_for_tat</code> 只看对方报价；对方朝你让一步，跟 80%</li>
+          <li><code>belief_cap</code> 只使用对方已经出过的最好价，不混入己方 counter</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="kicker">不完全信息 pipeline</p>
+    <div class="row">
+      <span class="node">seed 1.25× / 0.75×</span><span class="arrow">→</span>
+      <span class="node">faratin</span><span class="arrow">→</span>
+      <span class="node">tit_for_tat</span><span class="arrow">→</span>
+      <span class="node">belief_cap</span><span class="arrow">→</span>
+      <span class="node ask">一个数字</span>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>regime</th><th>何时</th><th>动作</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>no_zopa</code></td>
+          <td>双方估值可见，买家 &lt; 卖家</td>
+          <td>WalkAway</td>
+        </tr>
+        <tr>
+          <td><code>ultimatum</code></td>
+          <td>已知最后一轮 + 有 ZOPA</td>
+          <td>Nash 50/50，正利润就接</td>
+        </tr>
+        <tr>
+          <td><code>complete</code></td>
+          <td>双方估值 + 有剩余</td>
+          <td>ZOPA 分割；stubborn early 要 55%，通常接受 ≥50%</td>
+        </tr>
+        <tr>
+          <td><code>incomplete</code></td>
+          <td>只知道自己的估值</td>
+          <td>上面那条 pipeline</td>
+        </tr>
+        <tr>
+          <td><code>one_shot</code></td>
+          <td>隐藏估值、整局只有 1 回合</td>
+          <td>普通类型 1.10× / 0.90×；strong seller 1.25×</td>
+        </tr>
+        <tr>
+          <td><code>incomplete_deadline</code></td>
+          <td>多回合的最后一轮、隐藏估值</td>
+          <td>Faratin 收到保留价；最终响应接受非负利润</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <article class="card" style="margin-bottom:48px">
+      <div class="kicker">接受规则（百分位评分）</div>
+      <h2>没成交 = 0，比薄利更差</h2>
+      <p>完整信息通常接受 ≥50% 剩余；early stubborn 要 55%。对手风格按最近报价重新判断；未知期限若双方报价持续停滞，则主动反报价 Nash 中点，只有中点仍被拒且第 50 轮以后才接受任何正剩余。最后一轮和 one-shot 响应接任何正利润。隐藏估值按 own type 区分：live type 收到无利润报价时先按 seller 1.30×cost / buyer 0.80×value 反报价，早中期 seller 守 1.20×cost、buyer 守 0.90×value 并执行 AC-next，倒数第二轮再放宽；strong seller 的 one-shot 报价为 1.50×cost，其他轮次守 1.20×cost；strong buyer 的报价从 0.75×value 开始按 Boulware 调整，但接受上限独立保持 0.90×value。</p>
+    </article>
+  </main>
+  <footer>style、best share、重复价和 tit-for-tat 只读取对手报价。policy mutation 在 live 冻结。</footer>
+</body>
+</html>

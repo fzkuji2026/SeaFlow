@@ -1,0 +1,1562 @@
+{
+  "bargaining": {
+    "Alice|0.8|12|False": {
+      "deal_rate": 0.999004,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.36,
+      "median_round": 2.0,
+      "n": 2009
+    },
+    "Alice|0.8|12|True": {
+      "deal_rate": 0.992492,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.32,
+      "median_round": 3.0,
+      "n": 1998
+    },
+    "Alice|0.8|25|False": {
+      "deal_rate": 0.998748,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.384,
+      "median_round": 2.0,
+      "n": 1598
+    },
+    "Alice|0.8|25|True": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.352,
+      "median_round": 2.0,
+      "n": 1566
+    },
+    "Alice|0.8|inf|False": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4,
+      "median_round": 2.0,
+      "n": 402
+    },
+    "Alice|0.8|inf|True": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.358572,
+      "median_round": 2.0,
+      "n": 402
+    },
+    "Alice|0.95|12|False": {
+      "deal_rate": 0.994062,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.55,
+      "median_payoff_share": 0.475,
+      "median_round": 2.0,
+      "n": 2021
+    },
+    "Alice|0.95|12|True": {
+      "deal_rate": 0.991968,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.475,
+      "median_round": 2.0,
+      "n": 1992
+    },
+    "Alice|0.95|25|False": {
+      "deal_rate": 0.999378,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.496375,
+      "median_round": 2.0,
+      "n": 1608
+    },
+    "Alice|0.95|25|True": {
+      "deal_rate": 0.998094,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.488704,
+      "median_round": 2.0,
+      "n": 1574
+    },
+    "Alice|0.95|inf|False": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 406
+    },
+    "Alice|0.95|inf|True": {
+      "deal_rate": 0.997481,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 397
+    },
+    "Alice|0.9|12|False": {
+      "deal_rate": 0.996542,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.45,
+      "median_round": 2.0,
+      "n": 2024
+    },
+    "Alice|0.9|12|True": {
+      "deal_rate": 0.990923,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.42525,
+      "median_round": 2.0,
+      "n": 1983
+    },
+    "Alice|0.9|25|False": {
+      "deal_rate": 0.999378,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.45,
+      "median_round": 2.0,
+      "n": 1607
+    },
+    "Alice|0.9|25|True": {
+      "deal_rate": 0.999365,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4455,
+      "median_round": 2.0,
+      "n": 1574
+    },
+    "Alice|0.9|inf|False": {
+      "deal_rate": 0.997525,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.45,
+      "median_round": 2.0,
+      "n": 404
+    },
+    "Alice|0.9|inf|True": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4455,
+      "median_round": 2.0,
+      "n": 396
+    },
+    "Alice|1|12|False": {
+      "deal_rate": 0.992571,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 2019
+    },
+    "Alice|1|12|True": {
+      "deal_rate": 0.994587,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 2032
+    },
+    "Alice|1|25|False": {
+      "deal_rate": 0.997508,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 1605
+    },
+    "Alice|1|25|True": {
+      "deal_rate": 0.994427,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 1615
+    },
+    "Alice|1|inf|False": {
+      "deal_rate": 0.997549,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 408
+    },
+    "Alice|1|inf|True": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.52,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.52,
+      "median_round": 2.0,
+      "n": 403
+    },
+    "Bob|0.8|12|False": {
+      "deal_rate": 0.994065,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4,
+      "median_round": 2.0,
+      "n": 2022
+    },
+    "Bob|0.8|12|True": {
+      "deal_rate": 0.994497,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.352,
+      "median_round": 2.0,
+      "n": 1999
+    },
+    "Bob|0.8|25|False": {
+      "deal_rate": 0.998752,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4,
+      "median_round": 2.0,
+      "n": 1602
+    },
+    "Bob|0.8|25|True": {
+      "deal_rate": 0.998727,
+      "median_final_alice_share": 0.55,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.36,
+      "median_round": 2.0,
+      "n": 1571
+    },
+    "Bob|0.8|inf|False": {
+      "deal_rate": 0.997531,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4,
+      "median_round": 2.0,
+      "n": 405
+    },
+    "Bob|0.8|inf|True": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.55,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4,
+      "median_round": 2.0,
+      "n": 403
+    },
+    "Bob|0.95|12|False": {
+      "deal_rate": 0.998014,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.456,
+      "median_round": 2.0,
+      "n": 2014
+    },
+    "Bob|0.95|12|True": {
+      "deal_rate": 0.993985,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.450122,
+      "median_round": 2.0,
+      "n": 1995
+    },
+    "Bob|0.95|25|False": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.456,
+      "median_round": 2.0,
+      "n": 1588
+    },
+    "Bob|0.95|25|True": {
+      "deal_rate": 0.996833,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.464269,
+      "median_round": 2.0,
+      "n": 1579
+    },
+    "Bob|0.95|inf|False": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.456265,
+      "median_round": 2.0,
+      "n": 404
+    },
+    "Bob|0.95|inf|True": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.45125,
+      "median_round": 2.0,
+      "n": 399
+    },
+    "Bob|0.9|12|False": {
+      "deal_rate": 0.998005,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.405,
+      "median_round": 2.0,
+      "n": 2005
+    },
+    "Bob|0.9|12|True": {
+      "deal_rate": 0.992936,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.400475,
+      "median_round": 2.0,
+      "n": 1982
+    },
+    "Bob|0.9|25|False": {
+      "deal_rate": 0.999376,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.42282,
+      "median_round": 2.0,
+      "n": 1602
+    },
+    "Bob|0.9|25|True": {
+      "deal_rate": 0.996791,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.405,
+      "median_round": 2.0,
+      "n": 1558
+    },
+    "Bob|0.9|inf|False": {
+      "deal_rate": 0.997525,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.4374,
+      "median_round": 2.0,
+      "n": 404
+    },
+    "Bob|0.9|inf|True": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.52,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.405,
+      "median_round": 2.0,
+      "n": 389
+    },
+    "Bob|1|12|False": {
+      "deal_rate": 0.992126,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 2032
+    },
+    "Bob|1|12|True": {
+      "deal_rate": 0.988664,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 2029
+    },
+    "Bob|1|25|False": {
+      "deal_rate": 0.996925,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 1626
+    },
+    "Bob|1|25|True": {
+      "deal_rate": 0.999383,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 1621
+    },
+    "Bob|1|inf|False": {
+      "deal_rate": 1.0,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.6,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 407
+    },
+    "Bob|1|inf|True": {
+      "deal_rate": 0.997543,
+      "median_final_alice_share": 0.5,
+      "median_first_alice_share": 0.599999,
+      "median_payoff_share": 0.5,
+      "median_round": 2.0,
+      "n": 407
+    }
+  },
+  "bargaining_games": 32043,
+  "generated_at": "2026-08-24T11:13:47.626213+00:00",
+  "negotiation": {
+    "buyer|1.2|10|False": {
+      "deal_rate": 0.689911,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 2.25,
+      "median_payoff_over_base": 0.1,
+      "median_round": 4.0,
+      "median_surplus_share": 0.5,
+      "n": 674
+    },
+    "buyer|1.2|10|True": {
+      "deal_rate": 0.917037,
+      "median_first_price_over_base": 1.15,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.1875,
+      "median_round": 5.0,
+      "median_surplus_share": 0.575,
+      "n": 675
+    },
+    "buyer|1.2|1|False": {
+      "deal_rate": 0.313056,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 1.75,
+      "median_payoff_over_base": 0.0,
+      "median_round": 1.0,
+      "median_surplus_share": 0.5,
+      "n": 674
+    },
+    "buyer|1.2|1|True": {
+      "deal_rate": 0.662739,
+      "median_first_price_over_base": 1.15,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.01,
+      "median_round": 1.0,
+      "median_surplus_share": 0.25,
+      "n": 679
+    },
+    "buyer|1.2|25|False": {
+      "deal_rate": 0.573964,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 2.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 3.0,
+      "median_surplus_share": 0.5,
+      "n": 676
+    },
+    "buyer|1.2|25|True": {
+      "deal_rate": 0.924925,
+      "median_first_price_over_base": 1.15,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.15,
+      "median_round": 4.0,
+      "median_surplus_share": 0.5,
+      "n": 666
+    },
+    "buyer|1.5|10|False": {
+      "deal_rate": 0.75665,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 1.0,
+      "median_payoff_over_base": 0.2,
+      "median_round": 4.0,
+      "median_surplus_share": 0.571429,
+      "n": 1015
+    },
+    "buyer|1.5|10|True": {
+      "deal_rate": 0.936634,
+      "median_first_price_over_base": 1.4,
+      "median_first_seller_claim": 0.833333,
+      "median_payoff_over_base": 0.26,
+      "median_round": 6.0,
+      "median_surplus_share": 0.571429,
+      "n": 1010
+    },
+    "buyer|1.5|1|False": {
+      "deal_rate": 0.511286,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 1.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 1.0,
+      "median_surplus_share": 0.428571,
+      "n": 1019
+    },
+    "buyer|1.5|1|True": {
+      "deal_rate": 0.595472,
+      "median_first_price_over_base": 1.4,
+      "median_first_seller_claim": 0.8,
+      "median_payoff_over_base": 0.01,
+      "median_round": 1.0,
+      "median_surplus_share": 0.2,
+      "n": 1016
+    },
+    "buyer|1.5|25|False": {
+      "deal_rate": 0.676181,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 1.0,
+      "median_payoff_over_base": 0.15,
+      "median_round": 3.0,
+      "median_surplus_share": 0.5,
+      "n": 1016
+    },
+    "buyer|1.5|25|True": {
+      "deal_rate": 0.935872,
+      "median_first_price_over_base": 1.4,
+      "median_first_seller_claim": 0.8,
+      "median_payoff_over_base": 0.25,
+      "median_round": 4.0,
+      "median_surplus_share": 0.569048,
+      "n": 998
+    },
+    "buyer|1|10|False": {
+      "deal_rate": 0.642857,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 2.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 4.0,
+      "median_surplus_share": 0.34375,
+      "n": 336
+    },
+    "buyer|1|10|True": {
+      "deal_rate": 0.832353,
+      "median_first_price_over_base": 0.95,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.12,
+      "median_round": 5.0,
+      "median_surplus_share": 0.625,
+      "n": 340
+    },
+    "buyer|1|1|False": {
+      "deal_rate": 0.205882,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 2.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 1.0,
+      "median_surplus_share": 0.0,
+      "n": 340
+    },
+    "buyer|1|1|True": {
+      "deal_rate": 0.552941,
+      "median_first_price_over_base": 0.95,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 1e-06,
+      "median_round": 1.0,
+      "median_surplus_share": 0.25,
+      "n": 340
+    },
+    "buyer|1|25|False": {
+      "deal_rate": 0.389881,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 2.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 3.0,
+      "median_surplus_share": 0.4,
+      "n": 336
+    },
+    "buyer|1|25|True": {
+      "deal_rate": 0.863095,
+      "median_first_price_over_base": 0.95,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.1,
+      "median_round": 4.0,
+      "median_surplus_share": 0.6,
+      "n": 336
+    },
+    "seller|0.8|10|False": {
+      "deal_rate": 0.826904,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 1.0,
+      "median_payoff_over_base": 0.17,
+      "median_round": 4.0,
+      "median_surplus_share": 0.4375,
+      "n": 1011
+    },
+    "seller|0.8|10|True": {
+      "deal_rate": 0.927094,
+      "median_first_price_over_base": 1.1,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.15,
+      "median_round": 5.0,
+      "median_surplus_share": 0.425,
+      "n": 1015
+    },
+    "seller|0.8|1|False": {
+      "deal_rate": 0.584646,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 1.0,
+      "median_payoff_over_base": 0.15,
+      "median_round": 1.0,
+      "median_surplus_share": 0.5,
+      "n": 1016
+    },
+    "seller|0.8|1|True": {
+      "deal_rate": 0.613346,
+      "median_first_price_over_base": 1.1,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.15,
+      "median_round": 1.0,
+      "median_surplus_share": 0.75,
+      "n": 1019
+    },
+    "seller|0.8|25|False": {
+      "deal_rate": 0.708786,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 1.0,
+      "median_payoff_over_base": 0.2,
+      "median_round": 3.0,
+      "median_surplus_share": 0.5,
+      "n": 1013
+    },
+    "seller|0.8|25|True": {
+      "deal_rate": 0.93007,
+      "median_first_price_over_base": 1.1,
+      "median_first_seller_claim": 0.75,
+      "median_payoff_over_base": 0.15,
+      "median_round": 4.0,
+      "median_surplus_share": 0.428571,
+      "n": 1001
+    },
+    "seller|1.2|10|False": {
+      "deal_rate": 0.580645,
+      "median_first_price_over_base": 1.8,
+      "median_first_seller_claim": 2.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 4.0,
+      "median_surplus_share": 0.5,
+      "n": 341
+    },
+    "seller|1.2|10|True": {
+      "deal_rate": 0.878698,
+      "median_first_price_over_base": 1.45,
+      "median_first_seller_claim": 0.833333,
+      "median_payoff_over_base": 0.1,
+      "median_round": 5.0,
+      "median_surplus_share": 0.333333,
+      "n": 338
+    },
+    "seller|1.2|1|False": {
+      "deal_rate": 0.238235,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 1.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 1.0,
+      "median_surplus_share": 1.0,
+      "n": 340
+    },
+    "seller|1.2|1|True": {
+      "deal_rate": 0.514793,
+      "median_first_price_over_base": 1.45,
+      "median_first_seller_claim": 0.833333,
+      "median_payoff_over_base": 0.1875,
+      "median_round": 1.0,
+      "median_surplus_share": 0.833333,
+      "n": 338
+    },
+    "seller|1.2|25|False": {
+      "deal_rate": 0.494083,
+      "median_first_price_over_base": 1.8,
+      "median_first_seller_claim": 2.0,
+      "median_payoff_over_base": 0.0,
+      "median_round": 4.0,
+      "median_surplus_share": 0.5,
+      "n": 338
+    },
+    "seller|1.2|25|True": {
+      "deal_rate": 0.870482,
+      "median_first_price_over_base": 1.45,
+      "median_first_seller_claim": 0.833333,
+      "median_payoff_over_base": 0.1,
+      "median_round": 4.0,
+      "median_surplus_share": 0.4,
+      "n": 332
+    },
+    "seller|1|10|False": {
+      "deal_rate": 0.616642,
+      "median_first_price_over_base": 1.8,
+      "median_first_seller_claim": 2.5,
+      "median_payoff_over_base": 0.1,
+      "median_round": 4.0,
+      "median_surplus_share": 0.6,
+      "n": 673
+    },
+    "seller|1|10|True": {
+      "deal_rate": 0.907738,
+      "median_first_price_over_base": 1.25,
+      "median_first_seller_claim": 0.8,
+      "median_payoff_over_base": 0.1,
+      "median_round": 5.0,
+      "median_surplus_share": 0.45,
+      "n": 672
+    },
+    "seller|1|1|False": {
+      "deal_rate": 0.187592,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 2.25,
+      "median_payoff_over_base": 0.0,
+      "median_round": 1.0,
+      "median_surplus_share": 1.0,
+      "n": 677
+    },
+    "seller|1|1|True": {
+      "deal_rate": 0.654867,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 0.8,
+      "median_payoff_over_base": 0.15,
+      "median_round": 1.0,
+      "median_surplus_share": 0.8,
+      "n": 678
+    },
+    "seller|1|25|False": {
+      "deal_rate": 0.474151,
+      "median_first_price_over_base": 1.5,
+      "median_first_seller_claim": 2.5,
+      "median_payoff_over_base": 0.0,
+      "median_round": 4.0,
+      "median_surplus_share": 0.55,
+      "n": 677
+    },
+    "seller|1|25|True": {
+      "deal_rate": 0.929535,
+      "median_first_price_over_base": 1.2,
+      "median_first_seller_claim": 0.8,
+      "median_payoff_over_base": 0.125,
+      "median_round": 4.0,
+      "median_surplus_share": 0.5,
+      "n": 667
+    }
+  },
+  "negotiation_games": 32403,
+  "persuasion": {
+    "0.333333|1.25|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.0125,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.25,
+      "n": 108
+    },
+    "0.333333|1.25|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.05,
+      "n": 107
+    },
+    "0.333333|1.25|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.025,
+      "median_high_buy_rate": 0.75,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.2,
+      "n": 108
+    },
+    "0.333333|1.25|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.25,
+      "median_low_buy_rate": 0.0625,
+      "median_sale_rate": 0.1,
+      "n": 109
+    },
+    "0.333333|1.25|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.0625,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 110
+    },
+    "0.333333|1.25|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.0375,
+      "median_high_buy_rate": 0.833333,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.25,
+      "n": 110
+    },
+    "0.333333|1.25|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.325,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.1,
+      "n": 108
+    },
+    "0.333333|1.25|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.121429,
+      "median_low_buy_rate": 0.064583,
+      "median_sale_rate": 0.1,
+      "n": 108
+    },
+    "0.333333|1.2|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.04,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 108
+    },
+    "0.333333|1.2|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.333333,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.15,
+      "n": 109
+    },
+    "0.333333|1.2|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.555556,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.15,
+      "n": 108
+    },
+    "0.333333|1.2|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.0625,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.1,
+      "n": 108
+    },
+    "0.333333|1.2|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 109
+    },
+    "0.333333|1.2|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.01,
+      "median_high_buy_rate": 0.6,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.2,
+      "n": 109
+    },
+    "0.333333|1.2|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.5,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.15,
+      "n": 109
+    },
+    "0.333333|1.2|True|text|True": {
+      "median_buyer_payoff_per_round_price": -0.045,
+      "median_high_buy_rate": 0.25,
+      "median_low_buy_rate": 0.071429,
+      "median_sale_rate": 0.15,
+      "n": 108
+    },
+    "0.333333|2|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 108
+    },
+    "0.333333|2|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.196429,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.15,
+      "n": 106
+    },
+    "0.333333|2|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.1,
+      "median_high_buy_rate": 0.777778,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.25,
+      "n": 110
+    },
+    "0.333333|2|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.333333,
+      "median_low_buy_rate": 0.071429,
+      "median_sale_rate": 0.2,
+      "n": 108
+    },
+    "0.333333|2|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.25,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 110
+    },
+    "0.333333|2|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 0.666667,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.15,
+      "n": 107
+    },
+    "0.333333|2|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.777778,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.25,
+      "n": 109
+    },
+    "0.333333|2|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.0,
+      "median_low_buy_rate": 0.058824,
+      "median_sale_rate": 0.05,
+      "n": 107
+    },
+    "0.333333|3|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.5,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.35,
+      "n": 109
+    },
+    "0.333333|3|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.3,
+      "median_high_buy_rate": 0.8875,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.25,
+      "n": 110
+    },
+    "0.333333|3|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 0.8,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.25,
+      "n": 108
+    },
+    "0.333333|3|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.333333,
+      "median_low_buy_rate": 0.083333,
+      "median_sale_rate": 0.2,
+      "n": 110
+    },
+    "0.333333|3|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.5,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.35,
+      "n": 108
+    },
+    "0.333333|3|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.275,
+      "median_high_buy_rate": 0.714286,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.2,
+      "n": 108
+    },
+    "0.333333|3|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.4,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.35,
+      "n": 107
+    },
+    "0.333333|3|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 0.333333,
+      "median_low_buy_rate": 0.090909,
+      "median_sale_rate": 0.2,
+      "n": 109
+    },
+    "0.333333|4|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.75,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.35,
+      "n": 108
+    },
+    "0.333333|4|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.75,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 107
+    },
+    "0.333333|4|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.6,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 110
+    },
+    "0.333333|4|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.1,
+      "median_high_buy_rate": 0.571429,
+      "median_low_buy_rate": 0.148352,
+      "median_sale_rate": 0.3,
+      "n": 108
+    },
+    "0.333333|4|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.75,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.325,
+      "n": 108
+    },
+    "0.333333|4|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.75,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 107
+    },
+    "0.333333|4|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.2,
+      "median_high_buy_rate": 0.823077,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.3,
+      "n": 106
+    },
+    "0.333333|4|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.15,
+      "median_high_buy_rate": 0.366667,
+      "median_low_buy_rate": 0.138095,
+      "median_sale_rate": 0.25,
+      "n": 110
+    },
+    "0.5|1.25|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.0875,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 109
+    },
+    "0.5|1.25|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.45,
+      "n": 109
+    },
+    "0.5|1.25|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.839744,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.45,
+      "n": 106
+    },
+    "0.5|1.25|False|text|True": {
+      "median_buyer_payoff_per_round_price": -0.0375,
+      "median_high_buy_rate": 0.692308,
+      "median_low_buy_rate": 0.125,
+      "median_sale_rate": 0.4,
+      "n": 109
+    },
+    "0.5|1.25|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.1,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.45,
+      "n": 106
+    },
+    "0.5|1.25|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.1,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 108
+    },
+    "0.5|1.25|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.763889,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.375,
+      "n": 108
+    },
+    "0.5|1.25|True|text|True": {
+      "median_buyer_payoff_per_round_price": -0.05,
+      "median_high_buy_rate": 0.75,
+      "median_low_buy_rate": 0.214286,
+      "median_sale_rate": 0.45,
+      "n": 108
+    },
+    "0.5|1.2|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.07,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 108
+    },
+    "0.5|1.2|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.4,
+      "n": 108
+    },
+    "0.5|1.2|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.02,
+      "median_high_buy_rate": 0.9,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.4,
+      "n": 107
+    },
+    "0.5|1.2|False|text|True": {
+      "median_buyer_payoff_per_round_price": -0.01,
+      "median_high_buy_rate": 0.651515,
+      "median_low_buy_rate": 0.111111,
+      "median_sale_rate": 0.4,
+      "n": 108
+    },
+    "0.5|1.2|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.08,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.45,
+      "n": 108
+    },
+    "0.5|1.2|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.08,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.45,
+      "n": 110
+    },
+    "0.5|1.2|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.888889,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.4,
+      "n": 109
+    },
+    "0.5|1.2|True|text|True": {
+      "median_buyer_payoff_per_round_price": -0.05,
+      "median_high_buy_rate": 0.572727,
+      "median_low_buy_rate": 0.133929,
+      "median_sale_rate": 0.4,
+      "n": 110
+    },
+    "0.5|2|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.35,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 107
+    },
+    "0.5|2|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.35,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 107
+    },
+    "0.5|2|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.3,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 109
+    },
+    "0.5|2|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.1,
+      "median_high_buy_rate": 0.818182,
+      "median_low_buy_rate": 0.285714,
+      "median_sale_rate": 0.55,
+      "n": 107
+    },
+    "0.5|2|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.45,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.45,
+      "n": 109
+    },
+    "0.5|2|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.4,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 109
+    },
+    "0.5|2|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.275,
+      "median_high_buy_rate": 0.904545,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.45,
+      "n": 108
+    },
+    "0.5|2|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 0.8,
+      "median_low_buy_rate": 0.25,
+      "median_sale_rate": 0.45,
+      "n": 109
+    },
+    "0.5|3|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.85,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.55,
+      "n": 109
+    },
+    "0.5|3|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.9,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 109
+    },
+    "0.5|3|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.5,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 111
+    },
+    "0.5|3|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.4,
+      "median_high_buy_rate": 0.75,
+      "median_low_buy_rate": 0.363636,
+      "median_sale_rate": 0.6,
+      "n": 107
+    },
+    "0.5|3|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.9,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 113
+    },
+    "0.5|3|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.8,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 107
+    },
+    "0.5|3|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.6,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.55,
+      "n": 108
+    },
+    "0.5|3|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.4,
+      "median_high_buy_rate": 0.714286,
+      "median_low_buy_rate": 0.25,
+      "median_sale_rate": 0.5,
+      "n": 107
+    },
+    "0.5|4|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 1.2,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.55,
+      "n": 110
+    },
+    "0.5|4|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 1.2,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.074176,
+      "median_sale_rate": 0.5,
+      "n": 108
+    },
+    "0.5|4|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.8,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.080128,
+      "median_sale_rate": 0.55,
+      "n": 108
+    },
+    "0.5|4|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.85,
+      "median_high_buy_rate": 0.8,
+      "median_low_buy_rate": 0.363636,
+      "median_sale_rate": 0.55,
+      "n": 109
+    },
+    "0.5|4|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 1.35,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.55,
+      "n": 109
+    },
+    "0.5|4|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 1.35,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.5,
+      "n": 109
+    },
+    "0.5|4|True|text|False": {
+      "median_buyer_payoff_per_round_price": 1.0,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.111111,
+      "median_sale_rate": 0.6,
+      "n": 109
+    },
+    "0.5|4|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.55,
+      "median_high_buy_rate": 0.571429,
+      "median_low_buy_rate": 0.222222,
+      "median_sale_rate": 0.45,
+      "n": 111
+    },
+    "0.8|1.25|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.1125,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.25,
+      "median_sale_rate": 0.85,
+      "n": 108
+    },
+    "0.8|1.25|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.175,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 111
+    },
+    "0.8|1.25|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.09375,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.5,
+      "median_sale_rate": 0.9,
+      "n": 108
+    },
+    "0.8|1.25|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0625,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.75,
+      "median_sale_rate": 0.9,
+      "n": 110
+    },
+    "0.8|1.25|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.175,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.8,
+      "n": 109
+    },
+    "0.8|1.25|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.1875,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 106
+    },
+    "0.8|1.25|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.075,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.5,
+      "median_sale_rate": 0.9,
+      "n": 107
+    },
+    "0.8|1.25|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.708333,
+      "median_sale_rate": 0.9,
+      "n": 108
+    },
+    "0.8|1.2|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.04,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.333333,
+      "median_sale_rate": 0.85,
+      "n": 109
+    },
+    "0.8|1.2|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.11,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.8,
+      "n": 110
+    },
+    "0.8|1.2|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.04,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.2,
+      "median_sale_rate": 0.8,
+      "n": 107
+    },
+    "0.8|1.2|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.941176,
+      "median_low_buy_rate": 0.6,
+      "median_sale_rate": 0.85,
+      "n": 111
+    },
+    "0.8|1.2|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.15,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.8,
+      "n": 109
+    },
+    "0.8|1.2|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.13,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.8,
+      "n": 109
+    },
+    "0.8|1.2|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.05,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.333333,
+      "median_sale_rate": 0.85,
+      "n": 111
+    },
+    "0.8|1.2|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.0,
+      "median_high_buy_rate": 0.9375,
+      "median_low_buy_rate": 0.666667,
+      "median_sale_rate": 0.85,
+      "n": 109
+    },
+    "0.8|2|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.7,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 109
+    },
+    "0.8|2|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.75,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 109
+    },
+    "0.8|2|False|text|False": {
+      "median_buyer_payoff_per_round_price": 0.7,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 1.0,
+      "n": 108
+    },
+    "0.8|2|False|text|True": {
+      "median_buyer_payoff_per_round_price": 0.65,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 0.95,
+      "n": 108
+    },
+    "0.8|2|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 0.75,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.8,
+      "n": 111
+    },
+    "0.8|2|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 0.775,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 108
+    },
+    "0.8|2|True|text|False": {
+      "median_buyer_payoff_per_round_price": 0.7,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.714286,
+      "median_sale_rate": 0.95,
+      "n": 107
+    },
+    "0.8|2|True|text|True": {
+      "median_buyer_payoff_per_round_price": 0.6,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.8,
+      "median_sale_rate": 0.95,
+      "n": 110
+    },
+    "0.8|3|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 1.4,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 0.95,
+      "n": 109
+    },
+    "0.8|3|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 1.575,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 110
+    },
+    "0.8|3|False|text|False": {
+      "median_buyer_payoff_per_round_price": 1.5,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 1.0,
+      "n": 107
+    },
+    "0.8|3|False|text|True": {
+      "median_buyer_payoff_per_round_price": 1.4,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 0.95,
+      "n": 108
+    },
+    "0.8|3|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 1.5,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.8,
+      "n": 107
+    },
+    "0.8|3|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 1.55,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 109
+    },
+    "0.8|3|True|text|False": {
+      "median_buyer_payoff_per_round_price": 1.45,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.666667,
+      "median_sale_rate": 0.9,
+      "n": 109
+    },
+    "0.8|3|True|text|True": {
+      "median_buyer_payoff_per_round_price": 1.4,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 0.95,
+      "n": 111
+    },
+    "0.8|4|False|binary|False": {
+      "median_buyer_payoff_per_round_price": 2.25,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.166667,
+      "median_sale_rate": 0.9,
+      "n": 107
+    },
+    "0.8|4|False|binary|True": {
+      "median_buyer_payoff_per_round_price": 2.4,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.9,
+      "n": 108
+    },
+    "0.8|4|False|text|False": {
+      "median_buyer_payoff_per_round_price": 2.2,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 1.0,
+      "n": 109
+    },
+    "0.8|4|False|text|True": {
+      "median_buyer_payoff_per_round_price": 2.1,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 0.95,
+      "n": 110
+    },
+    "0.8|4|True|binary|False": {
+      "median_buyer_payoff_per_round_price": 2.4,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.8,
+      "n": 108
+    },
+    "0.8|4|True|binary|True": {
+      "median_buyer_payoff_per_round_price": 2.25,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.0,
+      "median_sale_rate": 0.85,
+      "n": 108
+    },
+    "0.8|4|True|text|False": {
+      "median_buyer_payoff_per_round_price": 2.25,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 0.666667,
+      "median_sale_rate": 0.95,
+      "n": 107
+    },
+    "0.8|4|True|text|True": {
+      "median_buyer_payoff_per_round_price": 2.2,
+      "median_high_buy_rate": 1.0,
+      "median_low_buy_rate": 1.0,
+      "median_sale_rate": 1.0,
+      "n": 108
+    }
+  },
+  "persuasion_games": 13021,
+  "source": "https://github.com/gleeframework/GLEE",
+  "source_commit": "2ab79607c2c691674dc299684e43736b91ac6c41"
+}
