@@ -12,6 +12,11 @@ Zichuan Fu<sup>1</sup>, Junjia Qi<sup>1</sup>, Xian Wu<sup>2</sup>, Wenlin Zhang
 
 <sup>1</sup>City University of Hong Kong &nbsp; <sup>2</sup>Tencent Jarvis Lab
 
+<h4>
+<a href="https://fzkuji2026.github.io/SeaFlow/">🌐 Project Page</a> &nbsp;
+<a href="https://github.com/fzkuji-neo/OpenProgram">🛠️ OpenProgram</a>
+</h4>
+
 [![NeurIPS 2026 IAB Workshop Spotlight](https://img.shields.io/badge/NeurIPS%202026%20IAB-Spotlight-4b44ce)](https://glee-competition.com/) [![GLEE Competition](https://img.shields.io/badge/GLEE%20Competition-1st%20overall-f5b301)](https://glee-competition.com/) [![Built on OpenProgram](https://img.shields.io/badge/built%20on-OpenProgram-2ea44f)](https://github.com/fzkuji-neo/OpenProgram) [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776ab)](https://www.python.org/)
 
 </div>
@@ -46,29 +51,7 @@ SeaFlow is the agent that ranked **first overall in the [GLEE competition](https
 - **Code-first procedures.** Each subtask has its own procedure. Most procedures are plain code, and an optional LLM judge only picks among legal alternatives that the code has already computed. The model never invents a price, split or expected value.
 - **Revision from execution feedback.** After a batch of games, a coding agent locates poorly handled cases in the records, adds a condition or revises a procedure, and keeps the change only if it holds up on evaluation.
 
-As the workflows mature, code takes over nearly all final decisions:
-
-<p align="center">
-  <img src="assets/llm_share.png" width="90%" alt="Share of actions decided with LLM participation across development stages">
-</p>
-
-## 🔬 Inside the final workflows
-
-Each move goes through three levels, and each level answers one question. Ordered rules first name the situation. A second step reads further features, such as the opponent's concession style or the type of our own hidden value, and picks a named procedure. A last step turns the procedure into an offer or a decision. All numbers come from code; the optional LLM calls at the end can only pick among legal options or write message text.
-
-<p align="center">
-  <img src="assets/decision_logic.png" width="95%" alt="Execution order of the final workflows for one move in Bargaining, Negotiation and Persuasion">
-</p>
-<p align="center"><em>Execution order for one move. Rows in a box are checked top-down; indentation marks nested checks; dashed boxes are optional LLM calls.</em></p>
-
-Replaying 42,633 recorded decision states through the final code shows which branches carry the decisions. In each game a few situations receive most states, and one or two procedures handle most states within a situation.
-
-<p align="center">
-  <img src="assets/decision_hierarchy.png" width="95%" alt="Share of replayed states per situation and the procedures chosen within each">
-</p>
-<p align="center"><em>Situations and procedures on replayed states. Bars give each situation's share, colored by the second-level split.</em></p>
-
-Every action also carries its decision path, such as `negotiation/open_horizon/live/faratin_conceder/offer`, so any move can be traced back to the branch that produced it.
+The final agent is mostly code: the LLM judge almost never decides after iteration 90, and every action records the branch that produced it. See the [project page](https://fzkuji2026.github.io/SeaFlow/) for the method details, behavior analysis and the structure of the final workflows.
 
 ## 🚀 Quick start
 
