@@ -4,7 +4,7 @@ Code for **Self-Evolving Agentic Workflows via Semantic Decomposition of Complex
 (NeurIPS 2026 IAB Workshop, GLEE Competition Track).
 
 The agent plays the Bargaining, Negotiation and Persuasion games of
-[GLEE](https://github.com/eilamshapira/GLEE). Each workflow decomposes a game into subtasks by the
+[GLEE](https://glee-competition.com/). Each workflow decomposes a game into subtasks by the
 observed situation and solves each subtask with code; an optional LLM module only picks among
 legal alternatives that the code computes. The workflows were revised from execution feedback
 with self-evolution built on [OpenProgram](https://github.com/fzkuji-neo/OpenProgram).
