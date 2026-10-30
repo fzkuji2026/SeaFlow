@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeaFlow: Self-Evolving Agentic Workflows</title>
+  <meta name="description" content="SeaFlow: Self-Evolving Agentic Workflows via Semantic Decomposition of Complex Tasks. NeurIPS 2026 IAB Workshop (Spotlight), 1st overall in the GLEE Competition.">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Castoro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+
+<section class="hero">
+  <h1 class="pub-title"><span class="brand">SeaFlow</span>: Self-Evolving Agentic Workflows via Semantic Decomposition of Complex Tasks</h1>
+  <p class="venue">NeurIPS 2026 Workshop on Interpreting Agent Behavior (IAB) &middot; GLEE Competition Track &middot; <b>Spotlight</b></p>
+  <p class="award">🏆 1st overall in the GLEE Competition</p>
+
+  <p class="authors">
+    <span>Zichuan Fu<sup>1</sup></span>
+    <span>Junjia Qi<sup>1</sup></span>
+    <span>Xian Wu<sup>2</sup></span>
+    <span>Wenlin Zhang<sup>1</sup></span>
+    <span>Yimin Deng<sup>1</sup></span>
+    <span>Kaifeng Guo<sup>1</sup></span>
+    <span>Xiangyu Zhao<sup>1</sup></span>
+  </p>
+  <p class="affils"><sup>1</sup>City University of Hong Kong &nbsp;&nbsp; <sup>2</sup>Tencent Jarvis Lab</p>
+
+  <div class="buttons">
+    <a class="btn disabled" title="Coming soon"><i class="fas fa-file-pdf"></i> Paper (coming soon)</a>
+    <a class="btn" href="https://github.com/fzkuji2026/SeaFlow"><i class="fab fa-github"></i> Code</a>
+    <a class="btn" href="https://github.com/fzkuji-neo/OpenProgram"><i class="fas fa-code-branch"></i> OpenProgram</a>
+    <a class="btn" href="https://glee-competition.com/"><i class="fas fa-trophy"></i> GLEE Competition</a>
+  </div>
+</section>
+
+<section class="section">
+  <figure class="teaser">
+    <img src="static/images/rating_evolution.png" alt="Official ratings and strategy changes over 725 iterations">
+    <figcaption><b>Figure 1.</b> Official GLEE ratings and representative strategy changes on the same 725-iteration axis. <b>Top:</b> recorded deployment segments, one rating per plotted iteration. <b>Bottom:</b> strategy changes made by the coding agent, with iteration numbers and operation markers.</figcaption>
+  </figure>
+</section>
+
+<section class="section">
+  <h2>Abstract</h2>
+  <p class="justify">Agentic workflows organize complex tasks into reusable procedures. However, invoking an LLM at every step incurs repeated inference costs and delays. We propose a framework for self-evolving agentic workflows through semantic task decomposition. Each subtask has explicit applicability conditions and a procedure that executes code or invokes a model as needed. An agent uses execution feedback to refine the decomposition and update these procedures. Experiments in the GLEE competition demonstrate the framework across bargaining, negotiation, and persuasion, with most observed final-decision procedures implemented in code.</p>
+</section>
+
+<section class="section">
+  <h2>Key Takeaways</h2>
+  <ul class="takeaways">
+    <li>🤔 <b>Calling an LLM at every step is slow and costly.</b> In repeated interactive games, the same kinds of decisions recur many times, and each LLM call adds inference cost and delay.</li>
+    <li>🧩 <b>We decompose each task by its meaning.</b> The workflow splits a game into subtasks with explicit conditions, such as the role, the information available, the opponent's behavior and the phase of the game. Each subtask has its own procedure, written in code or calling a model only where needed.</li>
+    <li>🔁 <b>An agent evolves the workflow from execution feedback.</b> After each batch of games, a coding agent finds poorly handled cases, splits subtasks, tunes parameters, fits models or redesigns procedures, and keeps a revision only if it holds up on evaluation.</li>
+    <li>🏆 <b>The final agent ranks 1st overall in GLEE.</b> Its ratings in Bargaining, Negotiation and Persuasion rise as the workflows evolve, and every decision is made locally within a millisecond.</li>
+    <li>🔍 <b>Code takes over nearly all final decisions.</b> The LLM judge answers about one in eleven actions early on and almost never after iteration 90, so the agent's behavior can be read directly from its code.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Method</h2>
+  <figure>
+    <img src="static/images/method.png" alt="A Bargaining code branch and the workflow revision cycle">
+    <figcaption><b>Figure 2.</b> (a) Bargaining decision paths in the final workflow; leaves return plan parameters. (b) The agent's workflow revision cycle, from execution feedback to a retained workflow.</figcaption>
+  </figure>
+  <p class="justify">Our method separates the workflow that makes decisions from the agent that improves it. The workflow is executable code and remains fixed during an interaction. After execution, the agent may revise that code using the resulting records and task outcomes.</p>
+  <h3>Programmatic workflow</h3>
+  <p class="justify">At iteration <i>k</i>, workflow <i>W<sub>k</sub></i> specifies a decision structure, parameters and solution procedures. Given the input <i>x<sub>t</sub></i> and the interaction history <i>h<sub>t</sub></i>, it returns an action <i>a<sub>t</sub></i> and an execution trace <i>&tau;<sub>t</sub></i>:</p>
+  <p class="eq">(<i>a<sub>t</sub></i>, <i>&tau;<sub>t</sub></i>) = <i>W<sub>k</sub></i>(<i>x<sub>t</sub></i>, <i>h<sub>t</sub></i>)</p>
+  <p class="justify">The program may use conditions, function calls, nesting and loops, so its structure is not restricted to a decision tree. Each operation can execute code directly or invoke a model: an LLM for unresolved language-dependent decisions, or a learned predictor for an estimated quantity. The surrounding program decides when an operation is used, supplies its inputs and processes its output.</p>
+  <h3>Workflow evolution</h3>
+  <p class="justify">The agent executes <i>W<sub>k</sub></i>, collects execution traces and task outcomes <i>D<sub>k</sub></i>, and examines poorly handled cases. It then builds a candidate <i>W&#771;<sub>k+1</sub></i> = <i>&#119964;</i>(<i>W<sub>k</sub></i>, <i>D<sub>k</sub></i>) with one or more of four operations:</p>
+  <div class="ops">
+    <div class="op"><b>Task decomposition</b><span>Split subtasks through observable conditions, or reorganize branches when distinct cases need different decisions.</span></div>
+    <div class="op"><b>Parameter adjustment</b><span>Tune thresholds, weights or other numerical settings within a suitable procedure.</span></div>
+    <div class="op"><b>Model fitting</b><span>Train classification or regression models from execution data, e.g. acceptance probabilities or continuation values.</span></div>
+    <div class="op"><b>Procedure redesign</b><span>Devise an alternative strategy, implemented in code or model reasoning, when the current one is inadequate.</span></div>
+  </div>
+  <p class="justify">The candidate is checked with replay, held-out records or bounded deployment. If retained it becomes <i>W<sub>k+1</sub></i>; otherwise the previous workflow is kept. Revisions happen between interactions, never during one.</p>
+</section>
+
+<section class="section">
+  <h2>Results</h2>
+  <p class="justify">We evaluate the agent on Bargaining, Negotiation and Persuasion in GLEE against the other competition agents. Performance is the official GLEE rating, and efficiency is the local decision time per action. GPT-5.5 revises the workflows via <a href="https://github.com/fzkuji-neo/OpenProgram">OpenProgram</a>, and Grok-4.6 serves the optional runtime LLM modules.</p>
+  <div class="table-wrap">
+    <table>
+      <caption><b>Table 1.</b> Competition ratings and mean statistics of the final workflows. The overall rating is <b>2594.5</b>, 1st on the GLEE leaderboard.</caption>
+      <thead><tr><th>Measure</th><th>Bargaining</th><th>Negotiation</th><th>Persuasion</th></tr></thead>
+      <tbody>
+        <tr><td>Official rating &uarr;</td><td><b>2760.27</b></td><td><b>2761.67</b></td><td><b>2261.58</b></td></tr>
+        <tr class="sep"><td>Mean branches per strategy node</td><td>2.13</td><td>2.25</td><td>2.24</td></tr>
+        <tr><td>Mean strategy judgments per action</td><td>37.61</td><td>22.95</td><td>7.42</td></tr>
+        <tr><td>Mean local decision time (ms)</td><td>0.118</td><td>0.198</td><td>0.122</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>How the workflows evolve</h3>
+  <p class="justify">The agent keeps revising its strategies throughout development (Figure 1), and revisions withdraw strategies as well as add them. A model judge enters Bargaining at iteration 40 and is disabled at 186. Each environment follows its own path: Negotiation first separates roles and hidden types, later probes the acceptance interval and remembers opponents across games; Persuasion switches its signals and sells a low-quality product after trust is built; Bargaining protects its payoff and mirrors revealed demands. The initial workflows contain none of these procedures, which the agent derives from game records.</p>
+</section>
+
+<section class="section">
+  <h2>Agent Behavior Analysis</h2>
+  <p class="justify">The agent decides through three kinds of modules: code, fitted machine-learning models and LLM calls. Code makes up most designed modules throughout development, fitted models join as the workflows learn from recorded games, and LLM modules remain as optional interfaces. Code and fitted models decide in under a millisecond, while the measured LLM calls take seconds and mostly fail.</p>
+  <div class="two-col">
+    <figure><img src="static/images/figure3a.png" alt="Shares of designed decision modules by executor"><figcaption>(a) Functional modules</figcaption></figure>
+    <figure><img src="static/images/figure3b.png" alt="Decision time per executor against strategy judgments"><figcaption>(b) Strategy judgments and latency</figcaption></figure>
+  </div>
+  <p class="caption"><b>Figure 3.</b> (a) Shares of designed decision modules by executor across iterations. (b) Decision time per executor against strategy judgments per decision (log scale). Crosses mark failed LLM calls.</p>
+  <p class="justify">In actual play, the LLM judge decides rarely and less over time. Early on it answers about one in eleven non-message actions, almost all of them Persuasion buyer decisions, and its answers agree with the code in all but one case. The agent then makes these decisions deterministic, and judge responses almost vanish after iteration 90.</p>
+  <figure>
+    <img src="static/images/llm_share.png" alt="Share of actions with a valid LLM-judge response per iteration">
+    <figcaption><b>Figure 4.</b> Share of non-message actions with a valid LLM-judge response per iteration, by task. Triangles mark responses that change the action. Dotted lines mark Persuasion leaving the judge.</figcaption>
+  </figure>
+</section>
+
+<section class="section">
+  <h2>Inside the Final Workflows</h2>
+  <p class="justify">The final code reaches each move through three levels, and each level answers a different question. Ordered rules first name the current situation. A second step reads further features and selects a procedure for that situation: Bargaining reads the opponent's concession style, Negotiation reads the type of our own hidden value, and Persuasion separates seller and buyer and tracks how credible the seller's signals have been. A last step turns the procedure into a concrete offer or decision. All numbers come from code; the optional model calls at the end can only choose among precomputed legal options or write message text.</p>
+  <figure>
+    <img src="static/images/decision_logic.png" alt="Execution order of the final workflows for one move">
+    <figcaption><b>Figure 5.</b> Execution order of the final workflows for one move. Within a box, rows are checked from top to bottom and indentation marks nested checks; dashed boxes are optional model calls.</figcaption>
+  </figure>
+  <p class="justify">To see which branches carry the decisions in practice, we replay the decision states recorded during development through the final revision. In each game a few situations receive most states, and within a situation one or two procedures handle most of them. Rare situations, such as the last round or one-round games, still keep their own leaves, added for edge cases met during development.</p>
+  <figure>
+    <img src="static/images/decision_hierarchy.png" alt="Situations and procedures of the final workflows on replayed states">
+    <figcaption><b>Figure 6.</b> Situations and procedures of the final workflows on replayed decision states. Each row is one situation; its bar gives the share of states, colored by the second-level split, and the right column lists the procedures chosen within that situation.</figcaption>
+  </figure>
+</section>
+
+<section class="section">
+  <h2>BibTeX</h2>
+  <pre><code>@inproceedings{fu2026seaflow,
+  title     = {Self-Evolving Agentic Workflows via Semantic Decomposition of Complex Tasks},
+  author    = {Fu, Zichuan and Qi, Junjia and Wu, Xian and Zhang, Wenlin and Deng, Yimin and Guo, Kaifeng and Zhao, Xiangyu},
+  booktitle = {NeurIPS 2026 Workshop on Interpreting Agent Behavior (IAB), GLEE Competition Track},
+  year      = {2026}
+}</code></pre>
+</section>
+
+<footer>
+  <p>Page layout inspired by the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page template.</p>
+</footer>
+
+</body>
+</html>
