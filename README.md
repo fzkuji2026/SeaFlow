@@ -2,7 +2,10 @@
 
 <div align="center">
 
-<img src="assets/title.png" width="85%" alt="SeaFlow: Self-Evolving Agentic Workflows via Semantic Decomposition of Complex Tasks">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/title_dark.png">
+  <img src="assets/title_light.png" width="85%" alt="SeaFlow: Self-Evolving Agentic Workflows via Semantic Decomposition of Complex Tasks">
+</picture>
 <hr>
 
 Zichuan Fu<sup>1</sup>, Junjia Qi<sup>1</sup>, Xian Wu<sup>2</sup>, Wenlin Zhang<sup>1</sup>, Yimin Deng<sup>1</sup>, Kaifeng Guo<sup>1</sup>, Xiangyu Zhao<sup>1</sup>
